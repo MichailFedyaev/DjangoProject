@@ -1,0 +1,67 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 32,
+    "fields": {
+        "name": "Haier 50 Smart TV S4",
+        "description": "4K UltraHD серебристый",
+        "image": "",
+        "category": 1,
+        "price": 41999,
+        "created_at": "2024-10-16T17:26:30.952Z",
+        "updated_at": "2024-10-16T17:26:30.952Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 33,
+    "fields": {
+        "name": "Xiaomi TV A2 43",
+        "description": "4K UltraHD черный",
+        "image": "",
+        "category": 1,
+        "price": 28999,
+        "created_at": "2024-10-16T17:28:15.802Z",
+        "updated_at": "2024-10-16T17:28:15.802Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 35,
+    "fields": {
+        "name": "ASUS TUF Gaming A15 FA506NF",
+        "description": "1920x1080, IPS, AMD Ryzen 5 7535HS, черный",
+        "image": "",
+        "category": 2,
+        "price": 73999,
+        "created_at": "2024-10-16T17:35:11.624Z",
+        "updated_at": "2024-10-16T17:35:11.624Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 36,
+    "fields": {
+        "name": "MSI Katana 17 B12VFK",
+        "description": "1920x1080, IPS, Intel Core i7-12650H",
+        "image": "",
+        "category": 2,
+        "price": 130499,
+        "created_at": "2024-10-16T17:36:06.424Z",
+        "updated_at": "2024-10-16T17:36:06.424Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 37,
+    "fields": {
+        "name": "HUAWEI MateBook D 16 2024",
+        "description": "1920x1200, IPS, Intel Core i5-12450H",
+        "image": "",
+        "category": 2,
+        "price": 53299,
+        "created_at": "2024-10-16T17:37:22.930Z",
+        "updated_at": "2024-10-16T17:37:22.930Z"
+    }
+}
+]
