@@ -1,67 +1,80 @@
 [
 {
     "model": "catalog.product",
-    "pk": 32,
+    "pk": 38,
     "fields": {
         "name": "Haier 50 Smart TV S4",
-        "description": "4K UltraHD серебристый",
-        "image": "",
+        "description": "HQLED, 4K UltraHD, Wi-Fi, 60 Гц, Android TV, серебристый HDMI х 4,",
+        "image": "images/t-1.jpg",
         "category": 1,
-        "price": 41999,
-        "created_at": "2024-10-16T17:26:30.952Z",
-        "updated_at": "2024-10-16T17:26:30.952Z"
+        "price": 43999,
+        "created_at": "2024-10-23T09:35:07.454Z",
+        "updated_at": "2024-10-23T09:35:07.454Z"
     }
 },
 {
     "model": "catalog.product",
-    "pk": 33,
+    "pk": 39,
     "fields": {
         "name": "Xiaomi TV A2 43",
-        "description": "4K UltraHD черный",
-        "image": "",
+        "description": "Direct LED, 4K UltraHD, Wi-Fi, 60 Гц, Android TV, HDMI х 3,  черный",
+        "image": "images/t-2.jpeg",
         "category": 1,
         "price": 28999,
-        "created_at": "2024-10-16T17:28:15.802Z",
-        "updated_at": "2024-10-16T17:28:15.802Z"
+        "created_at": "2024-10-23T09:52:11.641Z",
+        "updated_at": "2024-10-23T09:52:11.641Z"
     }
 },
 {
     "model": "catalog.product",
-    "pk": 35,
+    "pk": 40,
     "fields": {
         "name": "ASUS TUF Gaming A15 FA506NF",
-        "description": "1920x1080, IPS, AMD Ryzen 5 7535HS, черный",
-        "image": "",
+        "description": "1920x1080, IPS, AMD Ryzen 5 7535HS, ядра: 6 х 3.3 ГГц, RAM 16 ГБ, SSD 512 ГБ, чёрный",
+        "image": "images/n-1.jpg",
         "category": 2,
-        "price": 73999,
-        "created_at": "2024-10-16T17:35:11.624Z",
-        "updated_at": "2024-10-16T17:35:11.624Z"
+        "price": 75999,
+        "created_at": "2024-10-23T09:55:12.784Z",
+        "updated_at": "2024-10-23T09:55:12.784Z"
     }
 },
 {
     "model": "catalog.product",
-    "pk": 36,
+    "pk": 41,
     "fields": {
-        "name": "MSI Katana 17 B12VFK",
-        "description": "1920x1080, IPS, Intel Core i7-12650H",
-        "image": "",
+        "name": "MSI Katana 17 B12VFK-273RU",
+        "description": "1920x1080, IPS, Intel Core i7-12650H, ядра: 6 + 4 х 2.3 ГГц + 1.7 ГГц, RAM 16 ГБ, SSD 1000 ГБ, чёрный",
+        "image": "images/n-2.jpg",
         "category": 2,
-        "price": 130499,
-        "created_at": "2024-10-16T17:36:06.424Z",
-        "updated_at": "2024-10-16T17:36:06.424Z"
+        "price": 170999,
+        "created_at": "2024-10-23T09:58:03.080Z",
+        "updated_at": "2024-10-23T09:58:03.080Z"
     }
 },
 {
     "model": "catalog.product",
-    "pk": 37,
+    "pk": 42,
     "fields": {
         "name": "HUAWEI MateBook D 16 2024",
-        "description": "1920x1200, IPS, Intel Core i5-12450H",
-        "image": "",
+        "description": "1920x1200, IPS, Intel Core i5-12450H, ядра: 4 + 4 х 2 ГГц + 1.5 ГГц, RAM 16 ГБ, SSD 512 ГБ, серый",
+        "image": "images/n-3.jpg",
         "category": 2,
-        "price": 53299,
-        "created_at": "2024-10-16T17:37:22.930Z",
-        "updated_at": "2024-10-16T17:37:22.930Z"
+        "price": 64999,
+        "created_at": "2024-10-23T10:00:35.746Z",
+        "updated_at": "2024-10-23T10:00:35.746Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 43,
+    "fields": {
+        "name": "Samsung QE55QN90CAUXRU",
+        "description": "Mini LED, QLED, 4K UltraHD, Wi-Fi, 120 Гц, Tizen, HDMI х 4, USB х 2 шт, серебристый",
+        "image": "images/t-3.jpg",
+        "category": 1,
+        "price": 149999,
+        "created_at": "2024-10-23T10:23:29.914Z",
+        "updated_at": "2024-10-23T10:23:29.914Z"
     }
 }
 ]

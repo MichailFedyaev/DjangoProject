@@ -4,7 +4,9 @@ from .models import Product, Category
 
 
 def home(request):
-    return render(request, 'home.html')
+    products = Product.objects.all()
+    context = {"products": products}
+    return render(request, "home.html", context)
 
 
 def contacts(request):
