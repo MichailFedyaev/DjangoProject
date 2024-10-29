@@ -1,26 +1,28 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Product, Category
+from django.views.generic import ListView, DetailView, TemplateView
+from .models import Product
 
 
-def home(request):
-    products = Product.objects.all()
-    context = {"products": products}
-    return render(request, "home.html", context)
+class ProductListView(ListView):
+    model = Product
+
+    def get_queryset(self):
+        return Product.objects.all()
 
 
-def contacts(request):
-    if request.method == 'POST':
+class ProductDetailView(DetailView):
+    model = Product
+
+
+class ContactsView(TemplateView):
+    template_name = "catalog/contacts.html"
+
+    @staticmethod
+    def post(request):
         name = request.POST.get("name")
         phone = request.POST.get("phone")
         message = request.POST.get("message")
-
-        return HttpResponse(f'Спасибо, {name}! Мы получили ваш номер телефона и сообщение.')
-    return render(request, 'contacts.html')
-
-
-def product(request, pk):
-    product = Product.objects.get(pk=pk)
-    context = {"product": product}
-
-    return render(request, "product.html", context)
+        return HttpResponse(
+            f"{name}, указанные Вами телефон и сообщение получены<br>Телефон: {phone}<br>Сообщение: {message}"
+        )

@@ -18,13 +18,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.urls import path, include
-from catalog.apps import CatalogConfig
 from . import views
 
 app_name = 'catalog'
 
 urlpatterns = [
-    path('home/', views.home, name='home'),
-    path('contacts/', views.contacts, name='contacts'),
-    path("product/<int:pk>", views.product, name="product"),
+    path('list/', views.ProductListView.as_view(), name='product_list'),
+    path("contacts/", views.ContactsView.as_view(), name="contacts"),
+    path("product/<int:pk>", views.ProductDetailView.as_view(), name="product_detail"),
 ]

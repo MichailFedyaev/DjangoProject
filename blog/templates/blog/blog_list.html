@@ -1,0 +1,57 @@
+{% extends 'catalog/base.html' %}
+
+{% load my_tags %}
+
+{% block title %}Блог{% endblock %}
+
+{% block content %}
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Блог</h1>
+
+</div>
+
+<div class="container">
+    <div class="row">
+
+        {% for blog in object_list %}
+
+        <div class="col-12">
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="card-header col-4">
+                        <img src="{{ blog.preview | media_filter }}" class="img-fluid" style="object-fit: cover;">
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ blog.title }}</h5>
+                            <p class="card-text">{{ blog.content|truncatechars:100 }}</p>
+                            <p class="card-text"><small class="text-body-secondary">Количество просмотров - {{ blog.view_count }}</small></p>
+                            <p class="card-text"><small class="text-body-secondary">Создан: {{ blog.created_at }}</small></p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card-body">
+                            <a type="button" class="btn btn-outline-primary"
+                               href="{% url 'blog:blog_detail' blog.pk %}">Подробнее</a>
+                            <a type="button" class="btn btn-outline-primary"
+                               href="{% url 'blog:blog_update' blog.pk %}">Изменить</a>
+                            <a type="button" class="btn btn-outline-danger"
+                               href="{% url 'blog:blog_delete' blog.pk %}">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+    <div class="col-12">
+
+    </div>
+</div>
+
+{% endblock %}
