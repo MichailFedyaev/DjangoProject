@@ -1,0 +1,41 @@
+{% extends 'catalog/base.html' %}
+
+{% load my_tags %}
+
+{% block title %}Продукт{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row text-center">
+
+
+        <div class="col-12">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <img src="{{ object.image | media_filter}}" class="img-fluid">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ object.name }}</h5>
+                        {% csrf_token %}
+                        <p>Категория: {{ object.category }}</p>
+
+                        <p>{{ object.description }}</p>
+
+                        <h3 class="card-title pricing-card-title">{{ object.price }}</h3>
+
+                        <h5 class="card-title">Вы действительно хотите удалить "{{ object.name }}"?</h5>
+                        <button type="submit" class="btn btn-lg btn-block btn-outline-danger">Подтвердить</button>
+                        <a type="button" class="btn btn-outline-primary" href="{% url 'catalog:product_list' %}">Отменить</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

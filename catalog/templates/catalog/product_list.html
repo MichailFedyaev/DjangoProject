@@ -16,8 +16,10 @@
                         <p>{{ product.description|truncatechars:100 }}</p>
                         <h3 class="card-title pricing-card-title">{{ product.price }}</h3>
                     </div>
-                    <div class="card-footer mt-auto">
-                        <a type="button" class="btn btn-lg btn-block btn-outline-primary" href="#">Подробнее о товаре</a>
+                    <h3 class="card-title pricing-card-title">{{ product.price }}</h3>
+                    <a type="button" class="btn btn-outline-primary" href="{% url 'catalog:product_detail' product.pk %}">Подробнее</a>
+                    <a type="button" class="btn btn-outline-primary" href="{% url 'catalog:product_update' product.pk %}">Изменить</a>
+                    <a type="button" class="btn btn-outline-danger" href="{% url 'catalog:product_delete' product.pk %}">Удалить</a>
                     </div>
                 </div>
             </div>
