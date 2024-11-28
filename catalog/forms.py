@@ -46,5 +46,5 @@ class ProductForm(StyleFormMixin, ModelForm):
         if image:
             if image.size > 5 * 1024 * 1024:
                 raise ValidationError('Размер файла не должен превышать 5 МБ')
-            if not (image.name.lower().endswith('.jpg')or image.name.lower().endswith('.png')):
+            if not image.name.lower().endswith('.jpg') or image.name.lower().endswith('.png'):
                 raise ValidationError('Вы можете загрузить только .JPG и .PNG файлы')
