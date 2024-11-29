@@ -12,4 +12,4 @@ class Command(BaseCommand):
 
         # Добавляем данные из фикстур
         call_command("loaddata", "blog_fixture.json", format="json")
-        self.stdout.write(self.style.SUCCESS("Продукты загружены из фикстур успешно"))
+        self.stdout.write(self.style.SUCCESS("Блоги загружены из фикстур успешно"))

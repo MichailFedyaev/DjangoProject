@@ -1,24 +1,25 @@
 from django.http import HttpResponse
 from .models import Product, Category
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView, TemplateView, CreateView, UpdateView, DeleteView
 from .models import Product
 from .forms import ProductForm
 from django.urls import reverse_lazy
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy("catalog:product_list")
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy("catalog:product_list")
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, DeleteView):
     model = Product
     success_url = reverse_lazy("catalog:product_list")
 
@@ -30,11 +31,11 @@ class ProductListView(ListView):
         return Product.objects.all()
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Product
 
 
-class ContactsView(TemplateView):
+class ContactsView(LoginRequiredMixin, TemplateView):
     template_name = "catalog/contacts.html"
 
     @staticmethod

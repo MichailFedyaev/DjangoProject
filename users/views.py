@@ -11,7 +11,7 @@ from .models import CustomUser
 
 class RegisterView(CreateView):
     form_class = CustomUserCreationForm
-    template_name = "users/register.html"
+    template_name = "registration/register.html"
     success_url = reverse_lazy("catalog:product_list")
 
     def form_valid(self, form):
@@ -34,7 +34,7 @@ class RegisterView(CreateView):
 class UserChangeView(UpdateView):
     model = CustomUser
     form_class = CustomUserUpdateForm
-    template_name = "users/edit_profile.html"
+    template_name = "registration/edit_profile.html"
 
     context_object_name = "form"
 
