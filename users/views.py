@@ -7,6 +7,11 @@ from django.views.generic.edit import CreateView, UpdateView
 from config.settings import DEFAULT_FROM_EMAIL
 from .forms import CustomUserCreationForm, CustomUserUpdateForm
 from .models import CustomUser
+from django.contrib.auth.views import LogoutView
+
+
+class CustomLogoutView(LogoutView):
+    next_page = reverse_lazy('catalog:product_list')
 
 
 class RegisterView(CreateView):

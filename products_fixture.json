@@ -8,6 +8,8 @@
         "image": "images/t-1.jpg",
         "category": 1,
         "price": 43999,
+        "is_published": true,
+        "owner": null,
         "created_at": "2024-10-23T09:35:07.454Z",
         "updated_at": "2024-10-23T09:35:07.454Z"
     }
@@ -21,6 +23,8 @@
         "image": "images/t-2.jpeg",
         "category": 1,
         "price": 28999,
+        "is_published": true,
+        "owner": null,
         "created_at": "2024-10-23T09:52:11.641Z",
         "updated_at": "2024-10-23T09:52:11.641Z"
     }
@@ -34,6 +38,8 @@
         "image": "images/n-1.jpg",
         "category": 2,
         "price": 75999,
+        "is_published": true,
+        "owner": null,
         "created_at": "2024-10-23T09:55:12.784Z",
         "updated_at": "2024-10-23T09:55:12.784Z"
     }
@@ -47,6 +53,8 @@
         "image": "images/n-2.jpg",
         "category": 2,
         "price": 170999,
+        "is_published": true,
+        "owner": null,
         "created_at": "2024-10-23T09:58:03.080Z",
         "updated_at": "2024-10-23T09:58:03.080Z"
     }
@@ -60,6 +68,8 @@
         "image": "images/n-3.jpg",
         "category": 2,
         "price": 64999,
+        "is_published": true,
+        "owner": null,
         "created_at": "2024-10-23T10:00:35.746Z",
         "updated_at": "2024-10-23T10:00:35.746Z"
     }
@@ -70,9 +80,26 @@
     "fields": {
         "name": "Samsung QE55QN90CAUXRU",
         "description": "Mini LED, QLED, 4K UltraHD, Wi-Fi, 120 Гц, Tizen, HDMI х 4, USB х 2 шт, серебристый",
-        "image": "images/t-3.jpg",
+        "image": "images/t-3_cfAUyJj.jpg",
         "category": 1,
         "price": 149999,
+        "is_published": true,
+        "owner": null,
+        "created_at": "2024-10-23T10:23:29.914Z",
+        "updated_at": "2024-10-23T10:23:29.914Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 44,
+    "fields": {
+        "name": "test",
+        "description": "тестовый продукт",
+        "image": "images/7f92441613306e825bb3a888dada1403.jpg",
+        "category": 1,
+        "price": 1488,
+        "is_published": true,
+        "owner": 2,
         "created_at": "2024-10-23T10:23:29.914Z",
         "updated_at": "2024-10-23T10:23:29.914Z"
     }
