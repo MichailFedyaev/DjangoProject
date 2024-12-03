@@ -1,0 +1,15 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Skystore</h1>
+    {% if user.is_authenticated %}
+    <a type="button" class="btn btn-lg btn-block btn-outline-primary" href="{% url 'catalog:product_create' %}">Добавить
+        продукт</a>
+    {% endif %}
+    <form id="categoryForm" method="GET" action="{% url 'catalog:product_by_category_list' %}" class="d-flex justify-content-center mt-3">
+        <select class="form-select w-50" style="max-width: 33%;" name="category" onchange="this.form.submit()">
+            <option selected>Выберите категорию</option>
+            {% for category in categories %}
+            <option value="{{ category.pk }}">{{ category.name }}</option>
+            {% endfor %}
+        </select>
+    </form>
+</div>
