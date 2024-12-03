@@ -6,6 +6,7 @@ from django.views.generic import ListView, DetailView, TemplateView, CreateView,
 from .models import Product
 from .forms import ProductForm
 from django.urls import reverse_lazy
+from catalog.services import products_by_category
 
 
 class ProductCreateView(LoginRequiredMixin, CreateView):
@@ -54,6 +55,29 @@ class ProductListView(ListView):
         context = super().get_context_data(**kwargs)
         is_moderator = self.request.user.groups.filter(name="Модератор продуктов").exists()
         context["is_moderator"] = is_moderator
+        return context
+
+
+class ProductByCategoryListView(ListView):
+    model = Product
+    template_name = "catalog/product_by_category_list.html"
+
+    def get_queryset(self):
+        category_id = self.request.GET.get("category")
+
+        return products_by_category(category_id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        is_moderator = self.request.user.groups.filter(
+            name="Модератор продуктов"
+        ).exists()
+
+        context["is_moderator"] = is_moderator
+        categories = Category.objects.all()
+        context["categories"] = categories
+
         return context
 
 

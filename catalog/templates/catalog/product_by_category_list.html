@@ -6,7 +6,7 @@
 
 {% block content %}
 
-{% include 'catalog/includes/inc_store_title.html' %}
+{% include 'includes/sample_title.html' %}
 
 <div class="container">
     <div class="row text-center">
@@ -28,10 +28,12 @@
                         <a type="button" class="btn btn-outline-primary"
                            href="{% url 'catalog:product_detail' product.pk %}">Подробнее</a>
 
+
                         {% if product.owner == user %}
                         <a type="button" class="btn btn-outline-primary"
                            href="{% url 'catalog:product_update' product.pk %}">Изменить</a>
                         {% endif %}
+
 
                         {% if not product.is_published %}
                         <br>
